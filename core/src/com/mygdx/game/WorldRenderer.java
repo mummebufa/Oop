@@ -53,6 +53,7 @@ public class WorldRenderer {
 		renderPlayer();
 		renderTimer();
 		renderComputerScore();
+		renderPlayerScore();
 		renderleftright();
 		renderWinner();
 		batch.end();
@@ -79,6 +80,7 @@ public class WorldRenderer {
 	}
 	public void renderPlayerScore(){
 		batch.draw(score,0,700);
+		batch.draw(scoreTexture[world.playerScore],0,600);
 	}
 	public void renderComputerScore(){
 		batch.draw(score,950,700);

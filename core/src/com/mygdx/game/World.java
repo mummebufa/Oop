@@ -60,14 +60,18 @@ public class World {
 			this.ready=true;
 			this.computer = rand.nextInt(3);
 		}
-		else if(veryTime>=3 &&veryTime<4){
+		else if(veryTime>=3 && veryTime<3.2){
 			this.time = 0;
 			x=true;
-			updateComputer();
+			if(this.playerScore==2){
+			updateComputer();}
+			else{
+			this.computer = rand.nextInt(3);	
+			}
 			this.ready=true;
 			
 		}
-		else if(veryTime>=4 &&veryTime<5){
+		else if(veryTime>=3.2 &&veryTime<4){
 			updateScore();
 			this.ready=false;
 			this.veryTime=0;
